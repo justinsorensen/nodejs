@@ -44,44 +44,7 @@ function onEnd() {
   something that works.
 */
 
-function runStuff() {
-
-		var a = 3;		//defined here to give local scope
-
-		f1(function() { 
-			a--; 
-			console.log('f1 completed'); 
-			console.log(a); 
-			if(a==0) {
-				onEnd();
-			}
-			
-		});
-		
-		f2(function() { 
-			a--; 
-			console.log('f2 completed'); 
-			console.log(a); 
-			if(a==0) {
-				onEnd();
-			}
-		});
-		
-		f3(function() { 
-			a--; 
-			console.log('f3 completed'); 
-			console.log(a); 
-			if(a==0) {
-				onEnd();
-			}
-		});
-			
-}
-
-runStuff();
-
-
-
-
-
-
+f1(function() { console.log('f1 completed'); });
+f2(function() { console.log('f2 completed'); });
+f3(function() { console.log('f3 completed'); });
+onEnd();
